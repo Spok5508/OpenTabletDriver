@@ -494,7 +494,7 @@ namespace OpenTabletDriver.Daemon
             switch (SystemInterop.CurrentPlatform)
             {
                 case SystemPlatform.Windows:
-                    System.Diagnostics.Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.High;
+                    System.Diagnostics.Process.GetCurrentProcess().PriorityClass = ProcessPriorityClass.RealTime;
 
                     if (Environment.OSVersion.Version.Build >= 22000) // Windows 11
                     {
